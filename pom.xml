@@ -30,17 +30,9 @@
 	</dependencyManagement>
 
 	<dependencies>
-	<dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-api</artifactId>
-		<scope>test</scope>
-	</dependency>
+	
 	<!-- Optionally: parameterized tests support -->
-	<dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-params</artifactId>
-		<scope>test</scope>
-	</dependency>
+	
 
 	<dependency>
 		<groupId>org.testng</groupId>
@@ -55,11 +47,18 @@
 		<artifactId>selenium-java</artifactId>
 		<version>4.12.0</version>
 	</dependency>
+	
+	<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version> <!-- Or latest -->
+</dependency>
 	</dependencies>
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
+
 			<plugins>
 				<!-- clean lifecycle, see
 				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -103,6 +102,17 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.6.1</version>
 				</plugin>
+                             <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.3.0</version>
+    <configuration>
+        <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+    </configuration>
+</plugin>
+                                
 				
 				
 			</plugins>

@@ -1,5 +1,7 @@
-testClasses\LoginTest.class
 testClasses\RegisterTest.class
-utilities\BaseClass.class
+utilities\ExtentReportManager.class
 utilities\ListenerImplementation.class
 pages\HomePage.class
+utilities\ScreenShotUtils.class
+testClasses\LoginTest.class
+utilities\BaseClass.class

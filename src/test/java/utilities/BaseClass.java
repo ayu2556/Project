@@ -58,4 +58,15 @@ public class BaseClass {
 	public String getCurrentUrl() {
 		return driver.getCurrentUrl();
 	}
+	public static void closeBrowser() {
+		try {
+			Thread.sleep(2000);
+			if(driver!=null) {
+				driver.quit();
+			}
+		}
+		catch(Exception e) {
+			System.out.println("Error during driver quit");
+		}
+	}
 }
