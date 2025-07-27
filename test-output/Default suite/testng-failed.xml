@@ -7,6 +7,7 @@
         <methods>
           <include name="validationRegistrationLink"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testClasses.RegisterTest -->
     </classes>

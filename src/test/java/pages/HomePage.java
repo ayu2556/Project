@@ -14,7 +14,8 @@ public class HomePage extends BaseClass {
 	@FindBy(xpath = "//a[text()='Register']")
 	private WebElement RegisterLink;
 	
-	public void clickOnRegister() {
+	public RagisterPage clickOnRegister() {
 		clickOnAElement(RegisterLink);
+		return new RagisterPage(driver);
 	}
 }
